@@ -9,10 +9,10 @@ const Faqsection = () => {
   };
 
   const faqs = [
-    { question: "How long are the tutoring sessions?", answer: "Each session is one hour long." },
-    { question: "Can I change my tutor if I'm not satisfied?", answer: "Yes, you can request a tutor change anytime." },
-    { question: "What is your cancellation policy?", answer: "You can cancel 24 hours before the session without any charges." },
-    { question: "Do you offer group sessions?", answer: "Yes, we offer group sessions for up to 5 students." },
+    { question: "How long are the tutoring sessions?", answer: "Session time varies from teacher to teacher but usually it is around 1 hour." },
+    // { question: "Can I change my tutor if I'm not satisfied?", answer: "Yes, you can request a tutor change anytime." },
+    // { question: "What is your cancellation policy?", answer: "You can cancel 24 hours before the session without any charges." },
+    { question: "Do you offer group sessions?", answer: "Yes, we offer group sessions." },
     { question: "What skill levels do you accommodate?", answer: "We accommodate all skill levels, from beginner to advanced." },
   ];
 

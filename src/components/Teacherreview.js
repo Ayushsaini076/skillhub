@@ -37,14 +37,14 @@ const Teacherreview = () => {
         {reviews.map((review, index) => (
           <div key={index} className="bg-white shadow-lg rounded-xl p-6 text-left">
             <div className="flex items-center space-x-4">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-pink-500 text-white font-bold text-lg">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-500 text-white font-bold text-lg">
                 {review.initial}
               </div>
               <div>
                 <h3 className="font-semibold">{review.name}</h3>
                 <div className="flex items-center">
                   {/* <FaStar className="text-yellow-400 text-sm" /> */}
-                  <span className="ml-1 text-sm font-medium">{review.rating}</span>
+                  <span className="ml-1 text-sm font-medium">⭐{review.rating}</span>
                 </div>
               </div>
             </div>
@@ -53,7 +53,7 @@ const Teacherreview = () => {
         ))}
       </div>
 
-      <button className="mt-6 px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition">
+      <button className="mt-6 px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-gray-800 transition">
         View All Reviews
       </button>
     </div>

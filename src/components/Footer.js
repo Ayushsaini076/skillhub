@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Brand Section */}
         <div>
-          <h2 className="text-white text-lg font-bold mb-4">SkillShare</h2>
+          <h2 className="text-white text-lg font-bold mb-4">HobbiGo</h2>
           <p className="text-sm">
             Connecting passionate tutors with eager learners
           </p>
@@ -83,7 +83,7 @@ const Footer = () => {
           <ul className="space-y-2 text-sm">
             <li className="flex items-center">
               <i className="fas fa-phone-alt mr-2"></i>
-              <span>+1 (555) 123-4567</span>
+              <span>+(91) 7078181741</span>
             </li>
             <li className="flex items-center">
               <i className="fas fa-envelope mr-2"></i>
@@ -92,9 +92,9 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="text-center text-xs text-gray-500 mt-8">
+      {/* <div className="text-center text-xs text-gray-500 mt-8">
         © 2024 SkillShare. All rights reserved.
-      </div>
+      </div> */}
     </footer>
   )
 }

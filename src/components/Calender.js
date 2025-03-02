@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
+import { Link } from "react-router-dom";
 
 export function ScheduleCalendar() {
   const [selectedSlots, setSelectedSlots] = useState([]);
@@ -84,9 +86,11 @@ export function ScheduleCalendar() {
               <button type="button" className="px-8 py-3 border border-orange-500 text-orange-500 rounded-lg hover:bg-orange-50 transition-colors">
                 Back
               </button>
+              <Link to='/onboarding'>
               <button type="button" className="px-8 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors">
                 Save Schedule
               </button>
+              </Link>
             </div>
           </div>
         </div>

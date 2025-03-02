@@ -28,7 +28,7 @@ const Homepage = () => {
 
     <Testimonials/>
 
-    <Pricingsections/>
+    {/* <Pricingsections/> */}
 
     <Faqsection/>
 

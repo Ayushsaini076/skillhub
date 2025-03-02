@@ -9,7 +9,7 @@ const Dashboard = () => {
           { title: "Active Batches", value: "12", growth: "+2.5%" },
           { title: "Total Students", value: "48", growth: "+5.2%" },
           { title: "Monthly Earnings", value: "₹24,500", growth: "+12.5%" },
-          { title: "Hours Taught", value: "86", growth: "+8.1%" },
+          // { title: "Hours Taught", value: "86", growth: "+8.1%" },
         ].map((stat, index) => (
           <div
             key={index}

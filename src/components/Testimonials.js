@@ -1,14 +1,14 @@
 import React from 'react'
 const testimonials = [
     {
-      name: "Emily Parker",
+      name: "Riya Rana",
       role: "Cooking Student",
       feedback:
         "The cooking classes exceeded my expectations. Chef Sarah's attention to detail and patient teaching style helped me master techniques I struggled with for years.",
       rating: 5,
     },
     {
-      name: "James Rodriguez",
+      name: "Aryan Garg",
       role: "Guitar Student",
       feedback:
         "I went from knowing nothing about guitar to playing my favorite songs in just a few months. Mike is an incredible instructor who makes learning fun.",

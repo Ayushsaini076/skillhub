@@ -47,14 +47,14 @@
                     <div className="text-gray-500">2:00 PM - 3:00 PM</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm font-medium text-gray-900">Python Basics</div>
-                    <div className="text-sm text-gray-500">Introduction to Programming</div>
+                    <div className="text-sm font-medium text-gray-900">Kathak</div>
+                    <div className="text-sm text-gray-500">Dance</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
                       <img src="https://avatar.iran.liara.run/public" alt="Teacher" className="h-8 w-8 rounded-full" />
                       <div className="ml-3">
-                        <div className="text-sm font-medium text-gray-900">Mark Johnson</div>
+                        <div className="text-sm font-medium text-gray-900">Rahul sirohi</div>
                       </div>
                     </div>
                   </td>
@@ -86,14 +86,14 @@
                     <div className="text-gray-500">4:00 PM - 5:00 PM</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm font-medium text-gray-900">JavaScript Advanced</div>
-                    <div className="text-sm text-gray-500">Async Programming</div>
+                    <div className="text-sm font-medium text-gray-900">Acostic</div>
+                    <div className="text-sm text-gray-500">Guitar</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
                       <img src="https://avatar.iran.liara.run/public" alt="Teacher" className="h-8 w-8 rounded-full" />
                       <div className="ml-3">
-                        <div className="text-sm font-medium text-gray-900">Sarah Smith</div>
+                        <div className="text-sm font-medium text-gray-900">Sujal Arora</div>
                       </div>
                     </div>
                   </td>
@@ -125,14 +125,14 @@
                     <div className="text-gray-500">1:00 PM - 2:00 PM</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm font-medium text-gray-900">Data Structures</div>
-                    <div className="text-sm text-gray-500">Arrays & Linked Lists</div>
+                    <div className="text-sm font-medium text-gray-900">yoga</div>
+                    <div className="text-sm text-gray-500">Meditation</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
                       <img src="https://avatar.iran.liara.run/public" alt="Teacher" className="h-8 w-8 rounded-full" />
                       <div className="ml-3">
-                        <div className="text-sm font-medium text-gray-900">Alex Brown</div>
+                        <div className="text-sm font-medium text-gray-900">Augustay Kohli</div>
                       </div>
                     </div>
                   </td>

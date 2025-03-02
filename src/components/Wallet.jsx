@@ -22,14 +22,7 @@ const Wallet = () => {
         </div>
 
         {/* Pending Payments */}
-        <div className="bg-white border rounded-lg p-6 flex flex-col justify-between">
-          <div>
-            <h2 className="text-gray-500 text-sm font-medium">Pending Payments</h2>
-            <div className="text-3xl font-semibold mt-2">₹8,000</div>
-            <div className="text-sm text-gray-500">from 4 students</div>
-          </div>
-          <button className="bg-gray-100 text-black px-4 py-2 rounded-md mt-4">View Details</button>
-        </div>
+        
 
         {/* Total Earnings */}
         <div className="bg-white border rounded-lg p-6 flex flex-col justify-between">

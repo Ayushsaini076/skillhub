@@ -1,16 +1,44 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useLocation,useNavigate } from 'react-router-dom';
+import axios from 'axios'
 
 const PricingAvailability = () => {
+  const location = useLocation();
+  const [formData, setFormData] = useState(location.state);
+  
+  let navigate = useNavigate();
+  // console.log(formData)
   const [oneToOnePrice, setOneToOnePrice] = useState('');
-  const [batchPrice, setBatchPrice] = useState('');
-  const [batchSize, setBatchSize] = useState('');
+ 
   const [isOneToOneAvailable, setIsOneToOneAvailable] = useState(false);
   const [isBatchAvailable, setIsBatchAvailable] = useState(false);
+  const [password,setPassword]=useState('');
+  const [id,setId]=useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission
+    formData.Fee = oneToOnePrice
+    formData.batchavailability = isBatchAvailable
+    formData.onetooneavailability = isOneToOneAvailable
+    formData.password = password
+
+    console.log(formData)
+    const base_url = process.env.BASE_URL
+    const postData = async()=>{
+      const res = await axios.post(`${base_url}/api/v1/teachers/register`,formData)
+
+      setId(res.data.data._id);
+    }
+
+    postData();
+
+    navigate(`/tutordash/${id}`)
+
   };
+
+  
 
   return (
     <section id="pricing_availability" className="py-20 bg-neutral-50">
@@ -39,7 +67,7 @@ const PricingAvailability = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-neutral-700 mb-2">
-                    One-to-One Session Price (per hour)
+                     Session Price (per hour)
                   </label>
                   <div className="relative">
                     <span className="absolute left-3 top-3 text-neutral-500">$</span>
@@ -55,25 +83,18 @@ const PricingAvailability = () => {
                     />
                   </div>
                 </div>
-                
                 <div>
-                  <label className="block text-sm font-medium text-neutral-700 mb-2">
-                    Batch Session Price (per student/hour)
-                  </label>
-                  <div className="relative">
-                    <span className="absolute left-3 top-3 text-neutral-500">$</span>
-                    <input 
-                      type="number" 
-                      className="w-full pl-8 pr-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-                      placeholder="0.00"
-                      value={batchPrice}
-                      onChange={(e) => setBatchPrice(e.target.value)}
-                      min="0"
-                      step="0.01"
-                      required
-                    />
-                  </div>
-                </div>
+            <label className="block text-blue-700">Password</label>
+            <input
+              type="password"
+              name="password"
+              // value={formData.password}
+              onChange={(e)=>setPassword(e.target.value)}
+              required
+              className="w-full p-2 border border-blue-300 rounded-lg focus:ring focus:ring-blue-200"
+            />
+          </div>
+                {/*  */}
               </div>
 
               <div className="space-y-4">
@@ -86,8 +107,7 @@ const PricingAvailability = () => {
                       <input 
                         type="checkbox" 
                         className="peer sr-only" 
-                        checked={isOneToOneAvailable}
-                        onChange={(e) => setIsOneToOneAvailable(e.target.checked)}
+                        onChange={()=>setIsOneToOneAvailable(!isOneToOneAvailable)}
                       />
                       <div className="w-11 h-6 bg-neutral-200 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-neutral-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-orange-500"></div>
                     </div>
@@ -99,8 +119,7 @@ const PricingAvailability = () => {
                       <input 
                         type="checkbox" 
                         className="peer sr-only" 
-                        checked={isBatchAvailable}
-                        onChange={(e) => setIsBatchAvailable(e.target.checked)}
+                        onChange={()=>setIsBatchAvailable(!isBatchAvailable)}
                       />
                       <div className="w-11 h-6 bg-neutral-200 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-neutral-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-orange-500"></div>
                     </div>
@@ -109,31 +128,17 @@ const PricingAvailability = () => {
                 </div>
               </div>
 
-              <div>
-                <label className="block text-sm font-medium text-neutral-700 mb-2">
-                  Maximum Batch Size
-                </label>
-                <select 
-                  className="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500" 
-                  value={batchSize}
-                  onChange={(e) => setBatchSize(e.target.value)}
-                  disabled={!isBatchAvailable}
-                >
-                  <option value="">Select maximum students per batch</option>
-                  <option value="5">Up to 5 students</option>
-                  <option value="10">Up to 10 students</option>
-                  <option value="15">Up to 15 students</option>
-                  <option value="20">Up to 20 students</option>
-                </select>
-              </div>
+              
 
               <div className="flex justify-between">
                 <button type="button" className="px-8 py-3 border border-orange-500 text-orange-500 rounded-lg hover:bg-orange-50 transition-colors">
                   Back
                 </button>
+                {/* <Link to='/onboarding/step-5'> */}
                 <button type="submit" className="px-8 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors">
                   Continue
                 </button>
+                {/* </Link> */}
               </div>
             </div>
           </div>

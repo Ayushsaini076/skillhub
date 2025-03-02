@@ -2,6 +2,8 @@ import React from 'react';
 import Sessions from './SessionDetails';
 import Calendar from './Usercalendar';
 import Settings from './ProfileSetting';
+import { v4 as uuid4 } from 'uuid';
+import { Link } from 'react-router-dom';
 
 const EduDash = () => {
   return (
@@ -9,7 +11,7 @@ const EduDash = () => {
       {/* Sidebar Navigation */}
       <nav className="bg-white fixed w-64 h-screen hidden lg:block">
         <div className="p-4 border-b border-gray-200">
-          <div className="text-2xl font-bold text-blue-600">EduDash</div>
+          <div className="text-2xl font-bold text-blue-600">HobbiGo</div>
         </div>
         <div className="py-4">
           <a href="#overview" className="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-500 hover:text-white transition-colors">
@@ -58,9 +60,11 @@ const EduDash = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
                 </svg>
               </button>
+              <Link to={`/settings/${uuid4()}`}>
               <button className="flex items-center space-x-2">
                 <img src="https://avatar.iran.liara.run/public" alt="Profile" className="w-8 h-8 rounded-full" />
               </button>
+              </Link>
             </div>
           </div>
         </header>
@@ -92,13 +96,7 @@ const EduDash = () => {
             </div>
 
             {/* Wallet Balance */}
-            <div className="bg-white rounded-lg border border-gray-200 p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Wallet Balance</h3>
-              <div className="flex items-center">
-                <div className="text-3xl font-bold text-green-600">$250</div>
-                <div className="ml-2 text-sm text-gray-500">Available</div>
-              </div>
-            </div>
+            
 
             {/* Upcoming Sessions */}
             <div className="bg-white rounded-lg border border-gray-200 p-6">
@@ -114,7 +112,7 @@ const EduDash = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Membership</h3>
               <div className="flex items-center">
                 <div className="text-3xl font-bold text-yellow-600">Gold</div>
-                <div className="ml-2 text-sm text-gray-500">Valid till 2024</div>
+                <div className="ml-2 text-sm text-gray-500">Valid till 2025</div>
               </div>
             </div>
           </div>
@@ -128,21 +126,21 @@ const EduDash = () => {
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                   <div className="flex-1">
-                    <p className="text-sm font-medium text-gray-900">Completed Python Basics Course</p>
+                    <p className="text-sm font-medium text-gray-900">Completed Guitar Basics Course</p>
                     <p className="text-xs text-gray-500">2 days ago</p>
                   </div>
                 </li>
-                <li className="flex items-center">
+                {/* <li className="flex items-center">
                   <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
                   <div className="flex-1">
                     <p className="text-sm font-medium text-gray-900">Earned "Quick Learner" Badge</p>
                     <p className="text-xs text-gray-500">1 week ago</p>
                   </div>
-                </li>
+                </li> */}
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
                   <div className="flex-1">
-                    <p className="text-sm font-medium text-gray-900">Attended Web Development Workshop</p>
+                    <p className="text-sm font-medium text-gray-900">Attended sketching Workshop</p>
                     <p className="text-xs text-gray-500">2 weeks ago</p>
                   </div>
                 </li>
@@ -154,7 +152,7 @@ const EduDash = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Next Session</h3>
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                 <div className="flex items-center justify-between mb-2">
-                  <h4 className="text-md font-medium text-blue-800">Advanced JavaScript Concepts</h4>
+                  <h4 className="text-md font-medium text-blue-800">Advanced piano Concepts</h4>
                   <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Today</span>
                 </div>
                 <p className="text-sm text-blue-600 mb-2">4:00 PM - 5:30 PM</p>
@@ -162,7 +160,7 @@ const EduDash = () => {
                   <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                   </svg>
-                  Instructor: Sarah Johnson
+                  Pratima
                 </div>
               </div>
               <button className="mt-4 w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
@@ -180,8 +178,8 @@ const EduDash = () => {
         </section>
 
         <Sessions/>
-        <Calendar/>
-        <Settings/>
+        {/* <Calendar/> */}
+        {/* <Settings/> */}
       </main>
     </div>
   );

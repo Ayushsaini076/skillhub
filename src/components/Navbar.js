@@ -20,7 +20,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex-shrink-0">
-              <a href="#" className="text-2xl font-bold">SkillShare</a>
+              <a href="#" className="text-2xl font-bold">HobbiGo</a>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-center space-x-8">
@@ -33,9 +33,9 @@ const Navbar = () => {
               </div>
             </div>
             {/* <Link to={`/students/${uuidv4()}`}> */}
-              <div className='cursor-pointer' onClick={handleClick}>
+              {/* <div className='cursor-pointer' onClick={handleClick}>
                 <CircleUserRound/>
-              </div>
+              </div> */}
             {/* </Link> */}
             <div className="flex md:hidden">
               <button id="hamburger" className="inline-flex items-center justify-center p-2 rounded-md hover:bg-neutral-700 focus:outline-none">

@@ -6,7 +6,7 @@ const Exploreskills = () => {
           title: 'Cooking Classes',
           description: 'Learn culinary arts from professional chefs. Master kitchen techniques and create delicious dishes.',
           tutors: '20+ Expert Tutors',
-          bgColor: 'bg-green-500',
+          bgColor: 'bg-blue-500',
           icon: '📖', // Replace with an actual icon
         },
         {
@@ -20,31 +20,31 @@ const Exploreskills = () => {
           title: 'Guitar Training',
           description: 'Master acoustic or electric guitar with personalized lessons for all skill levels.',
           tutors: '12+ Expert Tutors',
-          bgColor: 'bg-purple-500',
+          bgColor: 'bg-blue-500',
           icon: '🎸', // Replace with an actual icon
         },
     ];
 
   return (
     <section className="py-12 bg-gray-50">
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto h-[60vh] text-center">
         <h2 className="text-3xl font-bold text-gray-900">Explore Featured Skills</h2>
         <p className="text-gray-600 mt-2">
           Discover a wide range of skills taught by expert tutors
         </p>
-        <div className="grid md:grid-cols-3 gap-6 mt-8">
+        <div className="grid md:grid-cols-3 gap-8 mt-8 ml-14">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
+              className="bg-white w-[20vw] h-[40vh] shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
             >
-              <div className={`h-20 flex items-center justify-center ${skill.bgColor} text-white text-4xl`}>
+              <div className={`h-40 flex items-center justify-center ${skill.bgColor} text-white text-4xl`}>
                 {skill.icon}
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-800">{skill.title}</h3>
                 <p className="text-gray-600 mt-2">{skill.description}</p>
-                <p className="text-green-500 font-medium mt-4">{skill.tutors}</p>
+                <p className="text-blue-500 font-medium mt-4">{skill.tutors}</p>
               </div>
             </div>
           ))}

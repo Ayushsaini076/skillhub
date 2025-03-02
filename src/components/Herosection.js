@@ -15,7 +15,7 @@ const Herosection = () => {
                 Connect with passionate tutors in cooking, music, guitar, and more. Learn at your own pace with personalized one-on-one sessions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/search">
+                <Link to="/signup">
                   <button className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-emerald-500 hover:bg-emerald-600 transition-colors">
                     Find Your Tutor
                   </button>
@@ -30,7 +30,7 @@ const Herosection = () => {
             </div>
             <div className="relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-emerald-400 to-blue-500 rounded-lg blur opacity-30"></div>
-              <div className="relative bg-neutral-800 p-8 rounded-lg">
+              {/* <div className="relative bg-neutral-800 p-8 rounded-lg">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-neutral-700 p-4 rounded-lg text-center">
                     <h3 className="text-2xl font-bold text-emerald-400">100+</h3>
@@ -48,8 +48,8 @@ const Herosection = () => {
                     <h3 className="text-2xl font-bold text-emerald-400">4.9</h3>
                     <p className="text-gray-300">Rating</p>
                   </div>
-                </div>
-              </div>
+                </div> */}
+              {/* </div> */}
             </div>
           </div>
         </div>

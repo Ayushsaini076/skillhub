@@ -26,16 +26,16 @@ const TutorCard = ({ name, role, description, rating, reviews, buttonColor }) =>
 const Teamsections = () => {
     const tutors = [
         {
-          name: "Chef Sarah Wilson",
+          name: "Ayush Saini",
           role: "Professional Chef",
           description:
             "15+ years of culinary experience in Michelin-starred restaurants",
           rating: "4.9",
           reviews: "120",
-          buttonColor: "green",
+          buttonColor: "blue",
         },
         {
-          name: "David Chen",
+          name: "Saad Ejas",
           role: "Music Composer",
           description: "Classical pianist with 20+ years of teaching experience",
           rating: "4.8",
@@ -43,12 +43,12 @@ const Teamsections = () => {
           buttonColor: "blue",
         },
         {
-          name: "Mike Thompson",
+          name: "Aadarsh Dixit",
           role: "Guitar Virtuoso",
           description: "Professional guitarist with touring experience",
           rating: "4.9",
           reviews: "150",
-          buttonColor: "purple",
+          buttonColor: "blue",
         },
     ];
 

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { v4 as uuid4 } from 'uuid';
 
 const Settings = () => {
   return (
@@ -104,9 +106,11 @@ const Settings = () => {
 
         {/* Save Button */}
         <div className="mt-8 flex justify-end">
+          <Link to={`/students/${uuid4()}`}>
           <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-neutral-900">
             Save Changes
           </button>
+          </Link>
         </div>
       </div>
     </section>
