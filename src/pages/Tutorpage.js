@@ -24,7 +24,7 @@ const Tutorpage = () => {
     useEffect(()=>{
 
       const fetchData = async()=>{
-        const res = await axios.get(`${base_url}/api/v1/students/getallteacher/${id}`);
+        const res = await axios.get(`https://hobbigo-backend.onrender.com/api/v1/students/getallteacher/${id}`);
         console.log(res);
         setTutor(res.data.data)
       }

@@ -5,13 +5,13 @@ import axios from 'axios'
 import { useEffect } from 'react';
 
 const  Cardsection = () => {
-    const base_url = process.env.BASE_URL
+    const server_url = process.env.SERVER_URL
     const [tutors,setTutors]=useState([])
 
     useEffect(()=>{
 
       const fetchData = async()=>{
-        const res = await axios.get(`${base_url}/api/v1/students/getallteacher`);
+        const res = await axios.get(`https://hobbigo-backend.onrender.com/api/v1/students/getallteacher`);
         console.log(res);
         setTutors(res.data)
       }

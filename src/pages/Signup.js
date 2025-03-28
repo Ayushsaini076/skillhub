@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 // import { Button } from '@/components/ui/button'; // Assuming you're using shadcn/ui for buttons
 
 export default function AuthPage() {
-  const base_url = process.env.BASE_URL
+  const server_url = process.env.SERVER_URL
   const upload_preset = process.env.UPLOAD_PRESET
   const cloud_name = process.env.CLOUD_NAME
   const [isSignUp, setIsSignUp] = useState(true); // Toggle between SignUp and SignIn
@@ -49,11 +49,11 @@ export default function AuthPage() {
 
     const data = new FormData();
     data.append("file", file);
-    data.append("upload_preset", upload_preset);
-    data.append("cloud_name", cloud_name);
+    data.append("upload_preset", "skillhub");
+    data.append("cloud_name", "dplsr0d89");
 
     const res = await axios.post(
-      `https://api.cloudinary.com/v1_1/${cloud_name}/image/upload`,
+      `https://api.cloudinary.com/v1_1/dplsr0d89/image/upload`,
       data
     );
     console.log(res.data.secure_url);
@@ -84,7 +84,7 @@ export default function AuthPage() {
 
       const postData = async () => {
         const res = await axios.post(
-          `${base_url}/api/v1/students/register`,
+          `${server_url}/api/v1/students/register`,
           formData
         );
         if (res.statusText === "Created") {
@@ -112,7 +112,7 @@ export default function AuthPage() {
       console.log(logdata);
       // Call sign-in API here
       const res = await axios.post(
-        `${base_url}/api/v1/students/login`,
+        `https://hobbigo-backend.onrender.com/api/v1/students/login`,
         formData
       );
       console.log(res);

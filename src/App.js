@@ -31,7 +31,7 @@ function App() {
         <Route path='/tutorauth' element={<AuthLandingPage/>}/>
         <Route path='/students/:id' element={<StudentDashboard/>}/>
         <Route path='/tutordash/:id' element={<TutorDashboard/>}/>
-        <Route path='/settings/:id' element={<Settings/>}/>
+        <Route path='/settings' element={<Settings/>}/>
 
 
         <Route path='/onboarding/step-1' element={<OnboardingForm/>}/>

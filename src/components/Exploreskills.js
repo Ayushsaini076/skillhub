@@ -27,7 +27,7 @@ const Exploreskills = () => {
 
   return (
     <section className="py-12 bg-gray-50">
-      <div className="container mx-auto h-[60vh] text-center">
+      <div className="container mx-auto h-[70vh] text-center">
         <h2 className="text-3xl font-bold text-gray-900">Explore Featured Skills</h2>
         <p className="text-gray-600 mt-2">
           Discover a wide range of skills taught by expert tutors
