@@ -112,7 +112,7 @@ export default function AuthPage() {
       console.log(logdata);
       // Call sign-in API here
       const res = await axios.post(
-        `https://hobbigo-backend.onrender.com/api/v1/students/login`,
+        `${server_url}/api/v1/students/login`,
         formData
       );
       console.log(res);

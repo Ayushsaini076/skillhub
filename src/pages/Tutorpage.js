@@ -14,7 +14,7 @@ import Tutorvideo from '../components/Tutorvideo'
 import axios from 'axios'
 
 const Tutorpage = () => {
-  const base_url = process.env.BASE_URL
+  const server_url = process.env.SERVER_URL
   const [tutor,setTutor]=useState({})
   const location = useLocation();
   const path = location.pathname;
@@ -24,7 +24,7 @@ const Tutorpage = () => {
     useEffect(()=>{
 
       const fetchData = async()=>{
-        const res = await axios.get(`https://hobbigo-backend.onrender.com/api/v1/students/getallteacher/${id}`);
+        const res = await axios.get(`${server_url}/api/v1/students/getallteacher/${id}`);
         console.log(res);
         setTutor(res.data.data)
       }

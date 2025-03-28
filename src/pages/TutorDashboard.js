@@ -14,12 +14,12 @@ const TutorDashboard = () => {
   const id = path.split('/').pop();
   console.log(id);
 
-  const base_url = process.env.BASE_URL
+  const server_url = process.env.SERVER_URL
 
     useEffect(()=>{
 
       const fetchData = async()=>{
-        const res = await axios.get(`https://hobbigo-backend.onrender.com/api/v1/students/getallteacher/${id}`);
+        const res = await axios.get(`${server_url}/api/v1/students/getallteacher/${id}`);
         console.log(res);
         setTutor(res.data.data)
       }

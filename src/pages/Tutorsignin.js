@@ -22,9 +22,9 @@ const SignIn = () => {
         [name]: value,
       });
     };
-    const base_url = process.env.BASE_URL
+    const server_url = process.env.SERVER_URL
     const handleClick=async()=>{
-        const res = await axios.post(`https://hobbigo-backend.onrender.com/api/v1/teachers/login`,logdata)
+        const res = await axios.post(`${server_url}/api/v1/teachers/login`,logdata)
 
         console.log(res.data.data.teacher._id)
 

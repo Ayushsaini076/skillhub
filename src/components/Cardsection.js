@@ -11,7 +11,7 @@ const  Cardsection = () => {
     useEffect(()=>{
 
       const fetchData = async()=>{
-        const res = await axios.get(`https://hobbigo-backend.onrender.com/api/v1/students/getallteacher`);
+        const res = await axios.get(`${server_url}/api/v1/students/getallteacher`);
         console.log(res);
         setTutors(res.data)
       }

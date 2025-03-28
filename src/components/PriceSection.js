@@ -25,9 +25,10 @@ const PricingAvailability = () => {
     formData.password = password
 
     console.log(formData)
-    const base_url = process.env.BASE_URL
+    // const base_url = process.env.BASE_URL
+    const server_url = process.env.SERVER_URL
     const postData = async()=>{
-      const res = await axios.post(`https://hobbigo-backend.onrender.com/api/v1/teachers/register`,formData)
+      const res = await axios.post(`${server_url}/api/v1/teachers/register`,formData)
 
       setId(res.data.data._id);
     }
